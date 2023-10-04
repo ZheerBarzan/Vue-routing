@@ -1,6 +1,7 @@
 
 <script setup>
 import cars from "../data/cars.json"
+import { RouterLink } from "vue-router";
 
 </script>
 
@@ -8,10 +9,10 @@ import cars from "../data/cars.json"
     <div>
         <h1>home view</h1>
         <div class="cars">
-            <a v-for="car in cars" :key="car.id" href="">
+            <RouterLink :to="`/cars/${car.id}`" v-for="car in cars" :key="car.id" href="">
             
                 {{ car.name }}
-            </a>
+            </RouterLink>
         </div>
     </div>
 </template>
