@@ -18,6 +18,8 @@ const car = cars.find(c => c.id === parseInt(route.params.id))
 
     <div>
         <h1>car view</h1>
-        {{ car }}
+        <p>{{ car.name }}</p>
+        <p>{{ car.price }}</p>
+        <p>{{ car.year }}</p>
     </div>
 </template>
